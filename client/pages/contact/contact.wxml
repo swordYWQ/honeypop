@@ -1,0 +1,44 @@
+<!--pages/contact/contact.wxml-->
+<view class="container">
+  <view class="top-user">
+    <!-- <button open-type="getUserInfo"> -->
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="user-icon" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName||'未登录'}}</text>
+    </block>
+  </view>
+  <view class="row-item">
+    <text class="item-left">联系客服</text>
+    <!-- <text class="item-content">点击进入聊天</text> -->
+  </view>
+  <view class="row-item">
+    <text class="item-left">手机:13111111111</text>
+    <!-- <text class="item-content">13111111111</text> -->
+  </view>
+  <view class="row-item">
+    <text class="item-left">邮箱:1234578901@abc.com</text>
+    <!-- <text class="item-content">1234578901@abc.com</text> -->
+  </view>
+  <view class="row-item">
+    <text class="item-left">关于</text>
+    <!-- <text class="item-content">关于</text> -->
+  </view>
+  <view class="code-item">
+    <!-- <text class="item-left">扫码联系:</text> -->
+    <image class="item-left" style="width: 200rpx;height: 200rpx;" src="{{codeIcon}}" bindtap="priviewCode"></image>
+  </view>
+
+  <!-- <view class="row-item">
+    <text class="item-left">联系方式:</text>
+    <text class="item-content">13111111111</text>
+  </view>
+  <view class="row-item">
+    <text class="item-left">邮箱:</text>
+    <text class="item-content">1234578901@abc.com</text>
+  </view>
+  <view class="row-item">
+    <text class="item-left">扫码联系:</text>
+    <image class="item-content" style="width: 200rpx;height: 400rpx;" src="/pages/contact/qrcode.jpg"></image>
+  </view> -->
+</view>

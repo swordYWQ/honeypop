@@ -1,0 +1,7 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class="tabbar">
+  <view wx:for="{{list}}" wx:key="id" class="tabbar-item" data-path="{{item.path}}" bindtap="goPage">
+    <!-- <navigator class="tabbar-item-link" url="{{item.path}}" hover-class="navigator-hover">{{item.title}}</navigator> -->
+    <text class="tabbar-item-link {{item.index == activeindex?'active':''}}">{{item.title}}</text>
+  </view>
+</view>
