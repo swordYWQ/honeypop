@@ -7,8 +7,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #777;
-  border: 1rpx solid #ddd;
+  /* color: #777; *//* border: 1rpx solid #ddd; */
+  background-color: #6aa84f;
+  color: #fff;
 }
 
 .top-user .user-icon {
@@ -20,17 +21,40 @@
 .row-item {
   width: 100%;
   border-bottom: 1rpx solid #ddd;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center; */
-  padding: 0 60rpx;
   color: #888;
   box-sizing: border-box;
   line-height: 100rpx;
+  /* margin: 10rpx 0; */
 }
-.row-item:active{
+
+.row-item:active {
   background-color: #eee;
+}
+
+.row-item .row-btn{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 60rpx;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: #777;
+}
+
+.row-item .row-btn::after{  
+  border: 0;  
+}  
+
+.row-item .icon-left {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.row-item .icon-right {
+  width: 32rpx;
+  height: 32rpx;
 }
 
 .row-item .item-left {
@@ -42,8 +66,12 @@
   text-align: center;
 }
 
-.code-item{
+.code-item {
   text-align: center;
-  border:0;
+  border: 0;
   margin-top: 30rpx;
+}
+
+.center-code {
+  margin: 150rpx auto;
 }

@@ -16,7 +16,13 @@ Page({
     codeIcon: 'https://t1.picb.cc/uploads/2018/06/01/2SmxT7.png'
   },
 
-  priviewCode(e){
+
+  calling() {
+    wx.makePhoneCall({
+      phoneNumber: '18279677691'
+    })
+  },
+  priviewCode(e) {
     console.log(e)
     wx.previewImage({
       current: this.data.codeIcon,
@@ -63,6 +69,17 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '蜂蜜',
+      path: '/page/index/index'
+    }
   },
 
   /**
