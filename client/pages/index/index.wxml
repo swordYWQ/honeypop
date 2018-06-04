@@ -17,7 +17,12 @@
       <text class="bar-desc">{{item.title}}</text>
     </view>
   </view>
-
+      <!-- {
+        "pagePath": "pages/find/find",
+        "iconPath": "images/find.png",
+        "selectedIconPath": "images/find-select.png",
+        "text": "发现"
+      }, -->
   <view class="image-list-group">
     <image src="/images/image4.jpg" class="image-item" mode="widthFix"></image>
     <image src="/images/image5.jpg" class="image-item" mode="widthFix"></image>
